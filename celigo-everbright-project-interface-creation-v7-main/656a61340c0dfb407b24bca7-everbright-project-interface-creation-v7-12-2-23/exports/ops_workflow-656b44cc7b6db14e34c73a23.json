@@ -1,0 +1,70 @@
+{
+  "_id": "656b44cc7b6db14e34c73a23",
+  "name": "ops_workflow",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "ea36dbe103",
+  "asynchronous": true,
+  "isLookup": true,
+  "oneToMany": false,
+  "http": {
+    "relativeURI": "/api/v1/ops_workflow?site_id={{record.originalPayload.sales_workflow.site_Id}}",
+    "method": "GET",
+    "formType": "http"
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "extract": "results[*].uuid",
+            "generate": "originalPayload.ops_workflow.ops_workflow_Id"
+          },
+          {
+            "generate": "originalPayload.ops_workflow.initial_quote_Id",
+            "extract": "results[*].initial_quote"
+          },
+          {
+            "generate": "originalPayload.ops_workflow.site_Id",
+            "extract": "results[*].site"
+          },
+          {
+            "generate": "originalPayload.ops_workflow.contract_Id",
+            "extract": "results[*].contract"
+          },
+          {
+            "generate": "originalPayload.ops_workflow.last_updated_Id",
+            "extract": "results[*].last_updated"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "extract": "results[*].uuid",
+          "generate": "originalPayload.ops_workflow.ops_workflow_Id"
+        },
+        {
+          "generate": "originalPayload.ops_workflow.initial_quote_Id",
+          "extract": "results[*].initial_quote"
+        },
+        {
+          "generate": "originalPayload.ops_workflow.site_Id",
+          "extract": "results[*].site"
+        },
+        {
+          "generate": "originalPayload.ops_workflow.contract_Id",
+          "extract": "results[*].contract"
+        },
+        {
+          "generate": "originalPayload.ops_workflow.last_updated_Id",
+          "extract": "results[*].last_updated"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}

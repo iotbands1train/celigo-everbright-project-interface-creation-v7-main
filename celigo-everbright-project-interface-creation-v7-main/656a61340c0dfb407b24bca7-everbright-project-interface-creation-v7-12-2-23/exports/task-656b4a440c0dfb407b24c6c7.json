@@ -1,0 +1,283 @@
+{
+  "_id": "656b4a440c0dfb407b24c6c7",
+  "name": "task",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "edaa9d5932",
+  "asynchronous": true,
+  "isLookup": true,
+  "oneToMany": false,
+  "http": {
+    "relativeURI": "/api/v1/task?milestone_id={{record.originalPayload.milestone.milestone_Id}}",
+    "method": "GET",
+    "formType": "http"
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "extract": "count",
+            "generate": "originalPayload.task.count"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_Id",
+            "extract": "results[*].uuid"
+          },
+          {
+            "extract": "results[*].milestone",
+            "generate": "originalPayload.task.task_action.*.milestone_Id"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_definition_Id",
+            "extract": "results[*].task_definition"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_name",
+            "extract": "results[*].name"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_description",
+            "extract": "results[*].description"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_user_Id",
+            "extract": "results[*].responsible_user.uuid"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_user_email",
+            "extract": "results[*].responsible_user.email"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_user_first_name",
+            "extract": "results[*].responsible_user.first_name"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.task_user_last_name",
+            "extract": "results[*].responsible_user.last_name"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.approver_user_Id",
+            "extract": "results[*].approver_user.uuid"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.approver_user_email",
+            "extract": "results[*].approver_user.email"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.approver_user_first_name",
+            "extract": "results[*].approver_user.first_name"
+          },
+          {
+            "generate": "originalPayload.task.task_action.*.approver_user_last_name",
+            "extract": "results[*].approver_user.last_name"
+          },
+          {
+            "extract": "results[*].uuid",
+            "generate": "originalPayload.task.task_ids.*"
+          },
+          {
+            "generate": "originalPayload.task.last_task_Id",
+            "extract": "results[*].uuid"
+          },
+          {
+            "generate": "originalPayload.task.last_approver_user_Id",
+            "extract": "results[*].approver_user.uuid"
+          },
+          {
+            "generate": "originalPayload.task.last_approver_user_first_name",
+            "extract": "results[*].approver_user.first_name"
+          },
+          {
+            "generate": "originalPayload.task.last_approver_user_last_name",
+            "extract": "results[*].approver_user.last_name"
+          },
+          {
+            "generate": "originalPayload.task.last_approver_user_email",
+            "extract": "results[*].approver_user.email"
+          },
+          {
+            "generate": "originalPayload.task.last_approver_user_org_Id",
+            "extract": "results[*].approver_user.organization"
+          },
+          {
+            "generate": "originalPayload.task.last_approver_user_org_name",
+            "extract": "results[*].approver_user.organization_name"
+          },
+          {
+            "generate": "originalPayload.task.last_responsible_user_Id",
+            "extract": "results[*].responsible_user.uuid"
+          },
+          {
+            "generate": "originalPayload.task.last_responsible_user_first_name",
+            "extract": "results[*].responsible_user.first_name"
+          },
+          {
+            "generate": "originalPayload.task.last_responsible_user_last_name",
+            "extract": "results[*].responsible_user.last_name"
+          },
+          {
+            "generate": "originalPayload.task.last_responsible_user_email",
+            "extract": "results[*].responsible_user.email"
+          },
+          {
+            "generate": "originalPayload.task.last_responsible_user_org_Id",
+            "extract": "results[*].responsible_user.organization"
+          },
+          {
+            "generate": "originalPayload.task.last_responsible_user_org_name",
+            "extract": "results[*].responsible_user.organization_name"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "extract": "count",
+          "generate": "originalPayload.task.count"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_Id",
+          "extract": "results[*].uuid"
+        },
+        {
+          "extract": "results[*].milestone",
+          "generate": "originalPayload.task.task_action.*.milestone_Id"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_definition_Id",
+          "extract": "results[*].task_definition"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_name",
+          "extract": "results[*].name"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_description",
+          "extract": "results[*].description"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_user_Id",
+          "extract": "results[*].responsible_user.uuid"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_user_email",
+          "extract": "results[*].responsible_user.email"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_user_first_name",
+          "extract": "results[*].responsible_user.first_name"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.task_user_last_name",
+          "extract": "results[*].responsible_user.last_name"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.approver_user_Id",
+          "extract": "results[*].approver_user.uuid"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.approver_user_email",
+          "extract": "results[*].approver_user.email"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.approver_user_first_name",
+          "extract": "results[*].approver_user.first_name"
+        },
+        {
+          "generate": "originalPayload.task.task_action.*.approver_user_last_name",
+          "extract": "results[*].approver_user.last_name"
+        },
+        {
+          "extract": "results[*].uuid",
+          "generate": "originalPayload.task.task_ids.*"
+        },
+        {
+          "generate": "originalPayload.task.last_task_Id",
+          "extract": "results[*].uuid"
+        },
+        {
+          "generate": "originalPayload.task.last_approver_user_Id",
+          "extract": "results[*].approver_user.uuid"
+        },
+        {
+          "generate": "originalPayload.task.last_approver_user_first_name",
+          "extract": "results[*].approver_user.first_name"
+        },
+        {
+          "generate": "originalPayload.task.last_approver_user_last_name",
+          "extract": "results[*].approver_user.last_name"
+        },
+        {
+          "generate": "originalPayload.task.last_approver_user_email",
+          "extract": "results[*].approver_user.email"
+        },
+        {
+          "generate": "originalPayload.task.last_approver_user_org_Id",
+          "extract": "results[*].approver_user.organization"
+        },
+        {
+          "generate": "originalPayload.task.last_approver_user_org_name",
+          "extract": "results[*].approver_user.organization_name"
+        },
+        {
+          "generate": "originalPayload.task.last_responsible_user_Id",
+          "extract": "results[*].responsible_user.uuid"
+        },
+        {
+          "generate": "originalPayload.task.last_responsible_user_first_name",
+          "extract": "results[*].responsible_user.first_name"
+        },
+        {
+          "generate": "originalPayload.task.last_responsible_user_last_name",
+          "extract": "results[*].responsible_user.last_name"
+        },
+        {
+          "generate": "originalPayload.task.last_responsible_user_email",
+          "extract": "results[*].responsible_user.email"
+        },
+        {
+          "generate": "originalPayload.task.last_responsible_user_org_Id",
+          "extract": "results[*].responsible_user.organization"
+        },
+        {
+          "generate": "originalPayload.task.last_responsible_user_org_name",
+          "extract": "results[*].responsible_user.organization_name"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "filter": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        "greaterthan",
+        [
+          "number",
+          [
+            "extract",
+            "originalPayload.task.count"
+          ]
+        ],
+        0
+      ],
+      "version": "1"
+    },
+    "rules": [
+      "greaterthan",
+      [
+        "number",
+        [
+          "extract",
+          "originalPayload.task.count"
+        ]
+      ],
+      0
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}

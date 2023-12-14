@@ -1,0 +1,123 @@
+{
+  "_id": "656ad67e7b6db14e34c738ff",
+  "name": "Get Proposal",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "e7dcccb29d",
+  "asynchronous": true,
+  "isLookup": true,
+  "oneToMany": false,
+  "mockOutput": {
+    "page_of_records": [
+      {
+        "record": {
+          "count": 1,
+          "next": null,
+          "previous": null,
+          "results": [
+            {
+              "uuid": "e1c987d7-e243-421e-8d5c-418685c25d16",
+              "site": "56a9b904-ecfd-4507-97fd-624593982c4a",
+              "name": "Bobby Jordan",
+              "quotes": [
+                "d6fafe0e-f7a3-4278-9edb-ccd160470d60"
+              ],
+              "active_quote": "d6fafe0e-f7a3-4278-9edb-ccd160470d60",
+              "template": "890174ef-2c57-4305-987e-2b6a7f0ebcdd",
+              "stale": true,
+              "expiration_date": null,
+              "date_created": "2023-10-12T15:22:19.394992Z",
+              "date_updated": "2023-10-12T18:56:42.424544Z",
+              "date_emailed": null,
+              "date_previewed": null,
+              "date_downloaded": null,
+              "last_viewed": null,
+              "template_archived": false,
+              "viewer_count": 0,
+              "is_shade_qualification": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "http": {
+    "relativeURI": "/api/v1/proposal?site_id={{record.originalPayload.site.site_site_Id}}",
+    "method": "GET",
+    "formType": "http"
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "extract": "results[*].uuid",
+            "generate": "originalPayload.proposal.proposal_Id"
+          },
+          {
+            "generate": "originalPayload.proposal.active_quote_Id",
+            "extract": "results[*].active_quote"
+          },
+          {
+            "generate": "originalPayload.proposal.proposal_template_Id",
+            "extract": "results[*].template"
+          },
+          {
+            "generate": "originalPayload.proposal.proposal_name",
+            "extract": "results[*].name"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "extract": "results[*].uuid",
+          "generate": "originalPayload.proposal.proposal_Id"
+        },
+        {
+          "generate": "originalPayload.proposal.active_quote_Id",
+          "extract": "results[*].active_quote"
+        },
+        {
+          "generate": "originalPayload.proposal.proposal_template_Id",
+          "extract": "results[*].template"
+        },
+        {
+          "generate": "originalPayload.proposal.proposal_name",
+          "extract": "results[*].name"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "inputFilter": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        "notempty",
+        [
+          "string",
+          [
+            "extract",
+            "originalPayload.project.project_site_Id"
+          ]
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      "notempty",
+      [
+        "string",
+        [
+          "extract",
+          "originalPayload.project.project_site_Id"
+        ]
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}

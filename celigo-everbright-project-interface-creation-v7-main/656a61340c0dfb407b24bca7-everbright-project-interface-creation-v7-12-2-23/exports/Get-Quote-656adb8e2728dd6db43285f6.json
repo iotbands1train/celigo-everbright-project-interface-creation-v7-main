@@ -1,0 +1,439 @@
+{
+  "_id": "656adb8e2728dd6db43285f6",
+  "name": "Get Quote",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "e39bb4e458",
+  "asynchronous": true,
+  "isLookup": true,
+  "hooks": {
+    "preSavePage": {
+      "_scriptId": "656ad36e10be60191d1dd55d",
+      "function": "preSavePage"
+    }
+  },
+  "oneToMany": false,
+  "mockOutput": {
+    "page_of_records": [
+      {
+        "record": {
+          "uuid": "d6fafe0e-f7a3-4278-9edb-ccd160470d60",
+          "project": "b31270e0-5ce8-45fd-982a-26404225e06a",
+          "product": "0f8bb022-c758-4120-95f9-09922cec49be",
+          "initial_payment_amount": 0,
+          "install_cost": 25272,
+          "monthly_payment": 140.57,
+          "submission": {
+            "contract_term": 25,
+            "initial_payment_amount": 0,
+            "submitted_at": 1697124081.9672673,
+            "install_cost_per_watt": 3.9,
+            "product": "0f8bb022-c758-4120-95f9-09922cec49be",
+            "project": "b31270e0-5ce8-45fd-982a-26404225e06a",
+            "interest_rate": 3.99
+          },
+          "lookup_data": {
+            "interest_rate_ach_optout_penalty": 4.49,
+            "payment_factor": 0.378274253,
+            "state": "TX",
+            "payment_factor_nr_no_ach": 0.57189621,
+            "days_signed_to_cancel": 10,
+            "payment_factor_no_ach": 0.399515611,
+            "financing_fee_pct": 31.99,
+            "external_program": "R1",
+            "payment_factor_nr": 0.542378377
+          },
+          "product_attributes": {
+            "program_version": 2,
+            "prepayment_pct_of_loan": 30,
+            "channel_manager_name": "EverBright, LLC",
+            "qualification_phase": [
+              {
+                "state": "AL",
+                "status": "Active"
+              },
+              {
+                "state": "AK",
+                "status": "Active"
+              },
+              {
+                "state": "AZ",
+                "status": "Active"
+              },
+              {
+                "state": "AR",
+                "status": "Active"
+              },
+              {
+                "state": "CA",
+                "status": "Active"
+              },
+              {
+                "state": "CO",
+                "status": "Active"
+              },
+              {
+                "state": "CT",
+                "status": "Active"
+              },
+              {
+                "state": "DC",
+                "status": "Active"
+              },
+              {
+                "state": "DE",
+                "status": "Active"
+              },
+              {
+                "state": "FL",
+                "status": "Active"
+              },
+              {
+                "state": "GA",
+                "status": "Active"
+              },
+              {
+                "state": "HI",
+                "status": "Active"
+              },
+              {
+                "state": "ID",
+                "status": "Active"
+              },
+              {
+                "state": "IL",
+                "status": "Active"
+              },
+              {
+                "state": "IN",
+                "status": "Active"
+              },
+              {
+                "state": "IA",
+                "status": "Active"
+              },
+              {
+                "state": "KS",
+                "status": "Active"
+              },
+              {
+                "state": "KY",
+                "status": "Active"
+              },
+              {
+                "state": "LA",
+                "status": "Active"
+              },
+              {
+                "state": "ME",
+                "status": "Active"
+              },
+              {
+                "state": "MD",
+                "status": "Active"
+              },
+              {
+                "state": "MA",
+                "status": "Active"
+              },
+              {
+                "state": "MI",
+                "status": "Active"
+              },
+              {
+                "state": "MN",
+                "status": "Active"
+              },
+              {
+                "state": "MS",
+                "status": "Active"
+              },
+              {
+                "state": "MO",
+                "status": "Active"
+              },
+              {
+                "state": "MT",
+                "status": "Active"
+              },
+              {
+                "state": "NE",
+                "status": "Active"
+              },
+              {
+                "state": "NV",
+                "status": "Active"
+              },
+              {
+                "state": "NH",
+                "status": "Active"
+              },
+              {
+                "state": "NJ",
+                "status": "Active"
+              },
+              {
+                "state": "NM",
+                "status": "Active"
+              },
+              {
+                "state": "NY",
+                "status": "Active"
+              },
+              {
+                "state": "NC",
+                "status": "Active_Pre_Approved"
+              },
+              {
+                "state": "ND",
+                "status": "Active"
+              },
+              {
+                "state": "OH",
+                "status": "Active"
+              },
+              {
+                "state": "OK",
+                "status": "Active"
+              },
+              {
+                "state": "OR",
+                "status": "Active"
+              },
+              {
+                "state": "PA",
+                "status": "Active"
+              },
+              {
+                "state": "RI",
+                "status": "Active"
+              },
+              {
+                "state": "SC",
+                "status": "Active"
+              },
+              {
+                "state": "SD",
+                "status": "Active"
+              },
+              {
+                "state": "TN",
+                "status": "Active"
+              },
+              {
+                "state": "TX",
+                "status": "Active"
+              },
+              {
+                "state": "UT",
+                "status": "Active"
+              },
+              {
+                "state": "VT",
+                "status": "Active"
+              },
+              {
+                "state": "VA",
+                "status": "Active"
+              },
+              {
+                "state": "WA",
+                "status": "Active"
+              },
+              {
+                "state": "WV",
+                "status": "Active"
+              },
+              {
+                "state": "WI",
+                "status": "Active"
+              },
+              {
+                "state": "WY",
+                "status": "Active"
+              }
+            ],
+            "valid_insurance_coverage": "has_general_and_auto_and_work",
+            "promo_period_months": 0,
+            "late_charge_rate": 1.5,
+            "everbright_program_name": "BASE",
+            "itc_basis_mode": 3,
+            "compound_freq": 12,
+            "require_product_installation_org_authorized_signer": true,
+            "days_signed_to_cancel": 10,
+            "integration_status": "integrated_paying",
+            "pay_dealer_adder_milestone_alias": "installationcomplete",
+            "financing_partner": "88171ca6-1c4a-4753-88b5-8a689342c334",
+            "stub_payment_validation_threshold": 15,
+            "financing_partner_name": "EverBright, LLC",
+            "lookup_table": "4cf03cc1-8a05-4b55-bfbc-001b66aade46",
+            "fees_in_basis": true,
+            "days_until_credit_expiration": 60,
+            "channel_manager": "88171ca6-1c4a-4753-88b5-8a689342c334",
+            "qualification_process": "99071b58-4c13-4670-bac2-6f3f4ee3e055",
+            "limit_single_workflow_per_financier": true,
+            "loan_calculation_method": "PF",
+            "block_signed_quote_resign": true,
+            "attribute_lookup_table": "cd228240-ca02-4e42-87fa-960a7e0ccb10",
+            "months_until_prepayment": 18,
+            "solve_after_contract": "never",
+            "contract_generation_req": "requires_approved_amount_greater"
+          },
+          "expired": true,
+          "stale": false,
+          "archived": true,
+          "archive_reason": "AUTO: SITE ARCHIVED",
+          "ach_elected": false
+        }
+      }
+    ]
+  },
+  "http": {
+    "relativeURI": "/api/v1/quote/{{record.originalPayload.proposal.active_quote_Id}}",
+    "method": "GET",
+    "formType": "http"
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "extract": "submission.project",
+            "generate": "originalPayload.quote.project_Id"
+          },
+          {
+            "generate": "originalPayload.quote.fin_product_Id",
+            "extract": "product"
+          },
+          {
+            "generate": "originalPayload.quote.initial_payment_amount",
+            "extract": "initial_payment_amount"
+          },
+          {
+            "generate": "originalPayload.quote.install_cost",
+            "extract": "install_cost"
+          },
+          {
+            "generate": "originalPayload.quote.monthly_payment",
+            "extract": "monthly_payment"
+          },
+          {
+            "generate": "originalPayload.quote.install_cost_per_watt",
+            "extract": "submission.install_cost_per_watt"
+          },
+          {
+            "extract": "submission.interest_rate",
+            "generate": "originalPayload.quote.interest_rate"
+          },
+          {
+            "extract": "submission.submitted_at",
+            "generate": "originalPayload.quote.submitted_at_longv"
+          },
+          {
+            "extract": "submission.contract_term",
+            "generate": "originalPayload.quote.contract_term"
+          },
+          {
+            "extract": "lookup_data.state",
+            "generate": "originalPayload.quote.state"
+          },
+          {
+            "extract": "lookup_data.payment_factor_no_ach",
+            "generate": "originalPayload.quote.payment_factor_no_ach"
+          },
+          {
+            "extract": "lookup_data.financing_fee_pct",
+            "generate": "originalPayload.quote.financing_fee_pct"
+          },
+          {
+            "extract": "product_attributes.pay_dealer_adder_milestone_alias",
+            "generate": "originalPayload.quote.pay_dealer_adder_milestone_alias"
+          },
+          {
+            "extract": "product_attributes.financing_partner_name",
+            "generate": "originalPayload.quote.financing_partner_name"
+          },
+          {
+            "extract": "agreement_data",
+            "generate": "originalPayload.agreement_data"
+          },
+          {
+            "extract": "product_attributes.attribute_lookup_table",
+            "generate": "originalPayload.quote.attribute_lookup_table"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "extract": "submission.project",
+          "generate": "originalPayload.quote.project_Id"
+        },
+        {
+          "generate": "originalPayload.quote.fin_product_Id",
+          "extract": "product"
+        },
+        {
+          "generate": "originalPayload.quote.initial_payment_amount",
+          "extract": "initial_payment_amount"
+        },
+        {
+          "generate": "originalPayload.quote.install_cost",
+          "extract": "install_cost"
+        },
+        {
+          "generate": "originalPayload.quote.monthly_payment",
+          "extract": "monthly_payment"
+        },
+        {
+          "generate": "originalPayload.quote.install_cost_per_watt",
+          "extract": "submission.install_cost_per_watt"
+        },
+        {
+          "extract": "submission.interest_rate",
+          "generate": "originalPayload.quote.interest_rate"
+        },
+        {
+          "extract": "submission.submitted_at",
+          "generate": "originalPayload.quote.submitted_at_longv"
+        },
+        {
+          "extract": "submission.contract_term",
+          "generate": "originalPayload.quote.contract_term"
+        },
+        {
+          "extract": "lookup_data.state",
+          "generate": "originalPayload.quote.state"
+        },
+        {
+          "extract": "lookup_data.payment_factor_no_ach",
+          "generate": "originalPayload.quote.payment_factor_no_ach"
+        },
+        {
+          "extract": "lookup_data.financing_fee_pct",
+          "generate": "originalPayload.quote.financing_fee_pct"
+        },
+        {
+          "extract": "product_attributes.pay_dealer_adder_milestone_alias",
+          "generate": "originalPayload.quote.pay_dealer_adder_milestone_alias"
+        },
+        {
+          "extract": "product_attributes.financing_partner_name",
+          "generate": "originalPayload.quote.financing_partner_name"
+        },
+        {
+          "extract": "agreement_data",
+          "generate": "originalPayload.agreement_data"
+        },
+        {
+          "extract": "product_attributes.attribute_lookup_table",
+          "generate": "originalPayload.quote.attribute_lookup_table"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}

@@ -1,0 +1,97 @@
+{
+  "_id": "656b5dd52d244528063ffd6b",
+  "name": "sub-task",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "e6814c5072",
+  "asynchronous": true,
+  "isLookup": true,
+  "oneToMany": false,
+  "http": {
+    "relativeURI": "/api/v1/sub_task?task_id={{data.originalPayload.task.last_task_Id}}",
+    "method": "GET",
+    "formType": "http",
+    "response": {
+      "resourcePath": "results"
+    }
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "extract": "uuid",
+            "generate": "originalPayload.sub_task.sub_task_Id"
+          },
+          {
+            "generate": "originalPayload.sub_task.sub_task_label",
+            "extract": "label"
+          },
+          {
+            "generate": "originalPayload.sub_task.sub_task_instructions",
+            "extract": "instructions"
+          },
+          {
+            "generate": "originalPayload.sub_task.sub_task_category",
+            "extract": "category"
+          },
+          {
+            "generate": "originalPayload.sub_task.sub_task_taskID",
+            "extract": "task"
+          },
+          {
+            "generate": "originalPayload.sub_task.sub_task_definition_Id",
+            "extract": "definition"
+          },
+          {
+            "generate": "originalPayload.sub_task.sub_task_attributes_recipients",
+            "extract": "attributes.recipients"
+          },
+          {
+            "extract": "attributes.email_body",
+            "generate": "originalPayload.sub_task.sub_task_attributes_email_body"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "extract": "uuid",
+          "generate": "originalPayload.sub_task.sub_task_Id"
+        },
+        {
+          "generate": "originalPayload.sub_task.sub_task_label",
+          "extract": "label"
+        },
+        {
+          "generate": "originalPayload.sub_task.sub_task_instructions",
+          "extract": "instructions"
+        },
+        {
+          "generate": "originalPayload.sub_task.sub_task_category",
+          "extract": "category"
+        },
+        {
+          "generate": "originalPayload.sub_task.sub_task_taskID",
+          "extract": "task"
+        },
+        {
+          "generate": "originalPayload.sub_task.sub_task_definition_Id",
+          "extract": "definition"
+        },
+        {
+          "generate": "originalPayload.sub_task.sub_task_attributes_recipients",
+          "extract": "attributes.recipients"
+        },
+        {
+          "extract": "attributes.email_body",
+          "generate": "originalPayload.sub_task.sub_task_attributes_email_body"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}

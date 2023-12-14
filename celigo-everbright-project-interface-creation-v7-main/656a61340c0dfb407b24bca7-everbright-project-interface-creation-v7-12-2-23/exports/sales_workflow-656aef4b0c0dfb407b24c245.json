@@ -1,0 +1,342 @@
+{
+  "_id": "656aef4b0c0dfb407b24c245",
+  "name": "sales_workflow",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "e6b51f457c",
+  "asynchronous": true,
+  "isLookup": true,
+  "oneToMany": false,
+  "mockOutput": {
+    "page_of_records": [
+      {
+        "record": {
+          "count": 1,
+          "next": null,
+          "previous": null,
+          "results": [
+            {
+              "uuid": "cf3ec4d7-48ee-49fd-be91-8f6648e71e4f",
+              "archived": true,
+              "workflow_definition": "66955d1b-d2ee-436d-9655-b22643d74275",
+              "site": "56a9b904-ecfd-4507-97fd-624593982c4a",
+              "current_phase": "quote",
+              "next_phase": "qualification",
+              "phases": [
+                {
+                  "uuid": "3e1b55b4-68b4-4ec2-b28e-c01c6d7c14db",
+                  "alias": "address",
+                  "order": 1,
+                  "displayed": true,
+                  "status": "COMP",
+                  "is_open": true,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "0b605586-36a2-49eb-ac37-0f4a7df14014",
+                  "summary": "<QuerySet [<Address: 1630 Lucile Ave, Wichita Falls, TX 76301>]>"
+                },
+                {
+                  "uuid": "0d87de91-acf7-4f87-9029-b62ee741644d",
+                  "alias": "quote",
+                  "order": 5,
+                  "displayed": true,
+                  "status": "NOSTART",
+                  "is_open": true,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "d0411e0c-4cab-423a-8b48-0eadcb131a33",
+                  "summary": "None"
+                },
+                {
+                  "uuid": "5bc7e49c-1b78-4a36-aaeb-21f3123d44de",
+                  "alias": "contact",
+                  "order": 2,
+                  "displayed": true,
+                  "status": "COMP",
+                  "is_open": true,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "237f49a1-5984-4426-b242-605f788d0388",
+                  "summary": "Bobby Jordan"
+                },
+                {
+                  "uuid": "a094479d-9878-4b09-94a3-72a2ca8021c5",
+                  "alias": "project",
+                  "order": 4,
+                  "displayed": true,
+                  "status": "COMP",
+                  "is_open": true,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "b8825baa-42e8-4a4e-ae2b-3bacebce11a7",
+                  "summary": "Project 1",
+                  "default_data": {
+                    "capacity": 5,
+                    "inverter_model": "a514fdf8-2ea4-4c9f-b42d-6b7af010ffd1",
+                    "pv_module_model": "5a8ac823-f38d-4460-8b8c-24eb9f6d9aee",
+                    "initial_input_mode": "RSD"
+                  }
+                },
+                {
+                  "uuid": "d57364ff-b6d8-4763-b134-01ce13029e8c",
+                  "alias": "usage",
+                  "order": 3,
+                  "displayed": true,
+                  "status": "COMP",
+                  "is_open": true,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "909f6e1c-33aa-49a8-80c6-4d44fc3c7253",
+                  "summary": "00618f3d-ab7e-4528-9a4d-f783e6df9d3b"
+                },
+                {
+                  "uuid": "ef374002-0d97-4594-93e5-891193491819",
+                  "alias": "proposal",
+                  "order": 6,
+                  "displayed": true,
+                  "status": "NOSTART",
+                  "is_open": false,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "569aee27-4154-45f4-bc0a-80fdf1836fc9",
+                  "summary": "None"
+                },
+                {
+                  "uuid": "a8089c2b-d992-4702-a8f1-44ce649a5ca1",
+                  "alias": "contract",
+                  "order": 8,
+                  "displayed": true,
+                  "status": "INPROG",
+                  "is_open": false,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "7125a76f-49d0-473c-8f19-37437dee89c5",
+                  "summary": "Contract 1"
+                },
+                {
+                  "uuid": "319a0b94-359f-4a04-9a3f-b829166d9add",
+                  "alias": "qualification",
+                  "order": 7,
+                  "displayed": true,
+                  "status": "COMP",
+                  "is_open": true,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "0aec1132-107b-48df-bf1c-1fff0f6ec772",
+                  "summary": "1630 Lucile Ave, Wichita Falls, TX 76301 - Bobby Jordan"
+                },
+                {
+                  "uuid": "214f30c1-3740-4204-80e8-0b37613b5ffb",
+                  "alias": "operations",
+                  "order": 9,
+                  "displayed": true,
+                  "status": "INPROG",
+                  "is_open": false,
+                  "assigned_to_user": {
+                    "uuid": "dbfe4797-2364-4523-909e-9ddb7111c234",
+                    "email": "miketexashomeinnov@gmail.com",
+                    "first_name": "Mike",
+                    "last_name": "Salinas",
+                    "organization": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "organization_name": "TriSMART Solar, LLC"
+                  },
+                  "assigned_to_organization": {
+                    "uuid": "3a2dee81-e5c4-4257-aaa6-51d0e0b5a874",
+                    "name": "TriSMART Solar, LLC",
+                    "is_active": true
+                  },
+                  "phase_definition": "a5e947d6-4b52-4c46-b95a-4ff8c108e135",
+                  "summary": ""
+                }
+              ],
+              "current_stage": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "http": {
+    "relativeURI": "/api/v1/sales_workflow?site_id={{record.originalPayload.project.project_site_Id}}",
+    "method": "GET",
+    "formType": "http"
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "extract": "results[*].uuid",
+            "generate": "originalPayload.sales_workflow.sales_workflow_Id"
+          },
+          {
+            "generate": "originalPayload.sales_workflow.workflow_definition_Id",
+            "extract": "results[*].workflow_definition"
+          },
+          {
+            "generate": "originalPayload.sales_workflow.site_Id",
+            "extract": "results[*].site"
+          },
+          {
+            "generate": "originalPayload.sales_workflow.current_phase",
+            "extract": "results[*].current_phase"
+          },
+          {
+            "generate": "originalPayload.sales_workflow.phases.*.phases_alias",
+            "extract": "results[*].phases[*].alias"
+          },
+          {
+            "extract": "results[*].phases[*].uuid",
+            "generate": "originalPayload.sales_workflow.phases.*.phases_id"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "extract": "results[*].uuid",
+          "generate": "originalPayload.sales_workflow.sales_workflow_Id"
+        },
+        {
+          "generate": "originalPayload.sales_workflow.workflow_definition_Id",
+          "extract": "results[*].workflow_definition"
+        },
+        {
+          "generate": "originalPayload.sales_workflow.site_Id",
+          "extract": "results[*].site"
+        },
+        {
+          "generate": "originalPayload.sales_workflow.current_phase",
+          "extract": "results[*].current_phase"
+        },
+        {
+          "generate": "originalPayload.sales_workflow.phases.*.phases_alias",
+          "extract": "results[*].phases[*].alias"
+        },
+        {
+          "extract": "results[*].phases[*].uuid",
+          "generate": "originalPayload.sales_workflow.phases.*.phases_id"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "inputFilter": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        "notempty",
+        [
+          "string",
+          [
+            "extract",
+            "originalPayload.project.project_site_Id"
+          ]
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      "notempty",
+      [
+        "string",
+        [
+          "extract",
+          "originalPayload.project.project_site_Id"
+        ]
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}

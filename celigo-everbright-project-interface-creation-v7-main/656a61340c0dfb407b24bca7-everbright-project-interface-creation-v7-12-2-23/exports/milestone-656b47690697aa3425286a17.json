@@ -1,0 +1,150 @@
+{
+  "_id": "656b47690697aa3425286a17",
+  "name": "milestone",
+  "_connectionId": "654e618e57f7f566040cf952",
+  "apiIdentifier": "ec3b724dc2",
+  "asynchronous": true,
+  "isLookup": true,
+  "oneToMany": false,
+  "http": {
+    "relativeURI": "/api/v1/milestone/{{record.originalPayload.ops_workflow_milestone.milestone_ops_Id}}",
+    "method": "GET",
+    "formType": "http"
+  },
+  "transform": {
+    "type": "expression",
+    "expression": {
+      "rules": [
+        [
+          {
+            "generate": "originalPayload.milestone.milestone_Id",
+            "extract": "uuid"
+          },
+          {
+            "generate": "originalPayload.milestone.name",
+            "extract": "name"
+          },
+          {
+            "generate": "originalPayload.milestone.approval_process",
+            "extract": "approval_process"
+          },
+          {
+            "generate": "originalPayload.milestone.milestone_milestone_definition_Id",
+            "extract": "milestone_definition"
+          },
+          {
+            "generate": "originalPayload.milestone.workflow_Id",
+            "extract": "workflow"
+          },
+          {
+            "generate": "originalPayload.milestone.responsible_organization_Id",
+            "extract": "responsible_organization.uuid"
+          },
+          {
+            "generate": "originalPayload.milestone.responsible_organization_name",
+            "extract": "responsible_organization.name"
+          },
+          {
+            "generate": "originalPayload.milestone.responsible_user_Id",
+            "extract": "responsible_user.uuid"
+          },
+          {
+            "generate": "originalPayload.milestone.responsible_user_first_name",
+            "extract": "responsible_user.first_name"
+          },
+          {
+            "generate": "originalPayload.milestone.responsible_user_last_name",
+            "extract": "responsible_user.last_name"
+          },
+          {
+            "extract": "responsible_user.email",
+            "generate": "originalPayload.milestone.responsible_user_email"
+          },
+          {
+            "generate": "originalPayload.milestone.approval_organization_Id",
+            "extract": "approval_organization.uuid"
+          },
+          {
+            "extract": "approval_organization.name",
+            "generate": "originalPayload.milestone.approval_organization_name"
+          },
+          {
+            "extract": "alias",
+            "generate": "originalPayload.milestone.alias"
+          },
+          {
+            "generate": "originalPayload.milestone.date_updated",
+            "extract": "date_updated"
+          }
+        ]
+      ],
+      "version": "1"
+    },
+    "rules": [
+      [
+        {
+          "generate": "originalPayload.milestone.milestone_Id",
+          "extract": "uuid"
+        },
+        {
+          "generate": "originalPayload.milestone.name",
+          "extract": "name"
+        },
+        {
+          "generate": "originalPayload.milestone.approval_process",
+          "extract": "approval_process"
+        },
+        {
+          "generate": "originalPayload.milestone.milestone_milestone_definition_Id",
+          "extract": "milestone_definition"
+        },
+        {
+          "generate": "originalPayload.milestone.workflow_Id",
+          "extract": "workflow"
+        },
+        {
+          "generate": "originalPayload.milestone.responsible_organization_Id",
+          "extract": "responsible_organization.uuid"
+        },
+        {
+          "generate": "originalPayload.milestone.responsible_organization_name",
+          "extract": "responsible_organization.name"
+        },
+        {
+          "generate": "originalPayload.milestone.responsible_user_Id",
+          "extract": "responsible_user.uuid"
+        },
+        {
+          "generate": "originalPayload.milestone.responsible_user_first_name",
+          "extract": "responsible_user.first_name"
+        },
+        {
+          "generate": "originalPayload.milestone.responsible_user_last_name",
+          "extract": "responsible_user.last_name"
+        },
+        {
+          "extract": "responsible_user.email",
+          "generate": "originalPayload.milestone.responsible_user_email"
+        },
+        {
+          "generate": "originalPayload.milestone.approval_organization_Id",
+          "extract": "approval_organization.uuid"
+        },
+        {
+          "extract": "approval_organization.name",
+          "generate": "originalPayload.milestone.approval_organization_name"
+        },
+        {
+          "extract": "alias",
+          "generate": "originalPayload.milestone.alias"
+        },
+        {
+          "generate": "originalPayload.milestone.date_updated",
+          "extract": "date_updated"
+        }
+      ]
+    ],
+    "version": "1"
+  },
+  "adaptorType": "HTTPExport"
+}
